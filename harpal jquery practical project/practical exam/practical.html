@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>dark mode website</title>
+    <link rel="stylesheet" href="style.css">
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+</head>
+<body>
+    <!-- navigation  -->
+     <nav>
+        <div class="nav-wrapper container">
+            <div class="logo"><a href="#">Veggies</a></div>
+            <ul class="menu">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Chef</a></li>
+                <li><a href="#">Blog</a></li>
+                <li><a href="#">Reservation</a></li>
+            </ul>
+            <div>
+                <ion-icon name="moon-outline" class="switch"></ion-icon>
+            </div>
+        </div>
+     </nav>
+     <!-- hero section  -->
+      <section class="hero-section">
+        <div class="container hero-wrapper">
+            <div>
+                <h1>Veggie Streak</h1>
+                <p>Vegetables play an important role in human nutrition. Most are low in fat and calories but are bulky and filling. They supply dietary fiber and are important sources of essential vitamins, minerals, and trace elements. Particularly important are the antioxidant vitamins A, C, and E.</p>
+                <a href="#" class="btn">Order Now</a>
+            </div>
+            <div>
+                <img src="food2.jpg" alt="">
+            </div>
+        </div>
+      </section>
+
+
+
+
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+      <script>
+        $(".switch").click(function(){
+            $("body").toggleClass("dark-mode");
+            if($("body").hasClass("dark-mode")){
+                $(".switch").attr("name","sunny-outline");
+            } else{
+                $(".switch").attr("name","moon-outline");
+            }
+        })
+      </script>
+
+
+</body>
+</html>
